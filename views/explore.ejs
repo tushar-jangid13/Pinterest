@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore categories</title>
+  <link rel="stylesheet" href="/stylesheets/explore.css">
+  <link rel="stylesheet" href="/stylesheets/sidebar.css">
+</head>
+<body class="with-sidebar">
+  <%- include('partials/sidebar', { activePage }) %>
+  <main class="explore-page">
+    <header class="explore-header">
+      <a class="back-link" href="/feed" aria-label="Back to home">←</a>
+      <h1>Browse by category</h1>
+      <a class="profile-link" href="/profile">Profile</a>
+    </header>
+    <section class="category-grid" aria-label="Explore categories">
+      <article class="category-card">
+        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=900&q=85" alt="Golden retriever">
+        <h2>Animals</h2>
+      </article>
+      <article class="category-card">
+        <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=85" alt="Paint and art supplies">
+        <h2>Art</h2>
+      </article>
+      <article class="category-card">
+        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=85" alt="Beauty makeup">
+        <h2>Beauty</h2>
+      </article>
+      <article class="category-card">
+        <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=900&q=85" alt="Colorful design shapes">
+        <h2>Design</h2>
+      </article>
+      <article class="category-card">
+        <img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=900&q=85" alt="Creative craft project">
+        <h2>DIY and Crafts</h2>
+      </article>
+      <article class="category-card">
+        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85" alt="Fresh food on a table">
+        <h2>Food and Drink</h2>
+      </article>
+      <article class="category-card">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85" alt="Warm home interior">
+        <h2>Home Decor</h2>
+      </article>
+      <article class="category-card">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85" alt="Men's fashion outfit">
+        <h2>Men's Fashion</h2>
+      </article>
+      <article class="category-card">
+        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=85" alt="Open book and writing">
+        <h2>Quotes</h2>
+      </article>
+      <article class="category-card">
+        <img src="https://images.unsplash.com/photo-1659615043416-c492e7f4f8ab?auto=format&fit=crop&w=900&q=85" alt="Tattooed arm reaching into a green garden">
+        <h2>Tattoos</h2>
+      </article>
+    </section>
+
+    <section class="more-section" aria-labelledby="more-heading">
+      <h2 id="more-heading">More to explore</h2>
+      <div class="category-grid more-grid">
+        <article class="category-card">
+          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=900&q=85" alt="Mountain lake travel destination">
+          <h2>Travel</h2>
+        </article>
+        <article class="category-card">
+          <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=85" alt="Camera for photography">
+          <h2>Photography</h2>
+        </article>
+        <article class="category-card">
+          <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=85" alt="Green indoor plants">
+          <h2>Gardening</h2>
+        </article>
+        <article class="category-card">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85" alt="Modern city architecture">
+          <h2>Architecture</h2>
+        </article>
+        <article class="category-card">
+          <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=900&q=85" alt="Music studio equipment">
+          <h2>Music</h2>
+        </article>
+        <article class="category-card">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=85" alt="Technology workspace">
+          <h2>Technology</h2>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

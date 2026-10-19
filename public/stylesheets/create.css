@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f7f7f7;
+  color: #211f1f;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.create-page {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 28px 0 48px;
+}
+
+.create-page-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.create-page-header h1 {
+  flex: 1;
+  margin: 0;
+  font-size: 25px;
+}
+
+.back-link,
+.profile-link {
+  color: #222;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.back-link {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 50%;
+  background: #eee;
+  font-size: 24px;
+}
+
+.profile-link {
+  padding: 11px 16px;
+  border-radius: 22px;
+  background: #eee;
+}
+
+.composer,
+.posts-section {
+  padding: 28px;
+  border: 1px solid #ededed;
+  border-radius: 22px;
+  background: #fff;
+}
+
+.composer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+
+.composer h2,
+.section-heading h2 {
+  margin: 0;
+  font-size: 21px;
+}
+
+.composer p {
+  margin: 7px 0 0;
+  color: #767676;
+}
+
+.upload-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.file-picker,
+.upload-form button {
+  padding: 12px 18px;
+  border: 1px solid #e5e5e5;
+  border-radius: 24px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.file-picker {
+  position: relative;
+  overflow: hidden;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+.file-picker input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.upload-form button {
+  border-color: #e60023;
+  background: #e60023;
+  color: #fff;
+  cursor: pointer;
+}
+
+.upload-form button:hover {
+  background: #c9001f;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.section-heading span {
+  display: grid;
+  min-width: 26px;
+  height: 26px;
+  padding: 0 7px;
+  place-items: center;
+  border-radius: 14px;
+  background: #f1f1f1;
+  color: #666;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.post-grid {
+  columns: 5 170px;
+  column-gap: 16px;
+}
+
+.post-card {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 16px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #f2f2f2;
+  break-inside: avoid;
+}
+
+.post-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.empty-posts {
+  padding: 36px 18px;
+  border: 1px dashed #d8d8d8;
+  border-radius: 16px;
+  color: #767676;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .create-page {
+    width: min(100% - 24px, 560px);
+    padding-top: 16px;
+  }
+
+  .composer {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 22px 18px;
+  }
+
+  .posts-section {
+    padding: 22px 18px;
+  }
+
+  .upload-form {
+    width: 100%;
+  }
+
+  .file-picker {
+    flex: 1;
+  }
+
+  .post-grid {
+    columns: 2 130px;
+    column-gap: 12px;
+  }
+}

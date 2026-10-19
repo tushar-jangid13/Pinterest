@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= user.username %>'s Profile</title>
+  <link rel="stylesheet" href="/stylesheets/profile.css">
+</head>
+<body>
+  <main class="profile-page">
+    <section class="card">
+      <div class="avatar">
+        <% if (user.dp) { %>
+          <img src="<%= user.dp %>" alt="<%= user.username %>'s profile photo">
+        <% } else { %>
+          <span><%= user.username.charAt(0).toUpperCase() %></span>
+        <% } %>
+      </div>
+      <h1 class="name"><%= user.username %></h1>
+      <p class="handle"><%= user.email %></p>
+      <div class="stats">
+        <div><strong><%= user.posts.length %></strong><span>Posts</span></div>
+        <div><strong>3.4k</strong><span>Followers</span></div>
+        <div><strong>210</strong><span>Following</span></div>
+      </div>
+      <a href="/feed" class="btn">Back to feed</a>
+    </section>
+  </main>
+</body>
+</html>

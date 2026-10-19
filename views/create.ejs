@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a post</title>
+  <link rel="stylesheet" href="/stylesheets/create.css">
+  <link rel="stylesheet" href="/stylesheets/sidebar.css">
+</head>
+<body class="with-sidebar">
+  <%- include('partials/sidebar', { activePage }) %>
+  <main class="create-page">
+    <header class="create-page-header">
+      <a class="back-link" href="/feed" aria-label="Back to home">←</a>
+      <h1>Create a post</h1>
+      <a class="profile-link" href="/profile">Profile</a>
+    </header>
+
+    <section class="composer">
+      <div>
+        <h2>Share an image</h2>
+        <p>Choose an image to publish it to your posts.</p>
+      </div>
+      <form action="/upload" method="post" enctype="multipart/form-data" class="upload-form">
+        <label class="file-picker">
+          <span>Choose image</span>
+          <input type="file" name="file" accept="image/*" required>
+        </label>
+        <button type="submit">Publish</button>
+      </form>
+    </section>
+
+    <section class="posts-section">
+      <div class="section-heading">
+        <h2>Your posts</h2>
+        <span><%= user.posts.length %></span>
+      </div>
+      <% if (user.posts.length) { %>
+        <div class="post-grid">
+          <% user.posts.forEach(function(post) { %>
+            <article class="post-card">
+              <img src="<%= post.imageUrl %>" alt="Post uploaded by <%= user.username %>">
+            </article>
+          <% }); %>
+        </div>
+      <% } else { %>
+        <p class="empty-posts">You haven’t posted any images yet.</p>
+      <% } %>
+    </section>
+  </main>
+</body>
+</html>

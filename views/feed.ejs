@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinterest Feed</title>
+  <link rel="stylesheet" href="/stylesheets/feed.css">
+  <link rel="stylesheet" href="/stylesheets/sidebar.css">
+</head>
+<body class="with-sidebar">
+
+  <%- include('partials/sidebar', { activePage }) %>
+
+  <!-- Search bar and profile button -->
+  <div class="page">
+    <header class="topbar">
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>
+        <input type="search" placeholder="Search for ideas">
+        <button class="search-tool" type="button" title="Search with an image" aria-label="Search with an image">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/><circle cx="12" cy="12" r="3.5"/><path d="M17 7h.01"/></svg>
+        </button>
+        <button class="search-tool mic" type="button" title="Voice search" aria-label="Voice search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M9 21h6"/></svg>
+        </button>
+      </div>
+
+      <a class="profile-menu" href="/profile" title="Your profile">
+        <span class="avatar">
+          <% if (user.dp) { %>
+            <img src="<%= user.dp %>" alt="<%= user.username %>'s profile photo">
+          <% } else { %>
+            <%= user.username.charAt(0).toUpperCase() %>
+          <% } %>
+        </span>
+      </a>
+    </header>
+
+    <!-- Feed content -->
+    <main class="content">
+      <div class="feed-tabs">
+        <a class="tab active" href="/feed">All</a>
+      </div>
+
+      <!-- Copy a pin-card to add another image -->
+      <section class="pin-grid">
+        <article class="pin-card">
+          <a class="pin-image" href="#">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=700&q=85" alt="Silver sports car">
+            <span class="save-button">Save</span>
+          </a>
+        </article>
+
+        <article class="pin-card">
+          <a class="pin-image" href="#">
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=700&q=85" alt="Classic car detail">
+            <span class="save-button">Save</span>
+            <span class="image-label">Last visited</span>
+          </a>
+        </article>
+
+        <article class="pin-card">
+          <a class="pin-image" href="#">
+            <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=700&q=85" alt="Yellow sports car">
+            <span class="save-button">Save</span>
+          </a>
+        </article>
+
+        <article class="pin-card">
+          <a class="pin-image" href="#">
+            <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=700&q=85" alt="Black performance car">
+            <span class="save-button">Save</span>
+          </a>
+        </article>
+
+        <article class="pin-card">
+          <a class="pin-image art-card art-orange" href="#">
+            <span class="art-word">STAY<br>CURIOUS</span>
+            <span class="save-button">Save</span>
+          </a>
+        </article>
+
+        <article class="pin-card">
+          <a class="pin-image" href="#">
+            <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=700&q=85" alt="Orange cat">
+            <span class="save-button">Save</span>
+          </a>
+        </article>
+
+        <article class="pin-card">
+          <a class="pin-image art-card art-red" href="#">
+            <span class="art-kicker">RACE DAY</span>
+            <span class="art-word">FULL<br>SPEED</span>
+            <span class="save-button">Save</span>
+          </a>
+        </article>
+
+        <article class="pin-card">
+          <a class="pin-image" href="#">
+            <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=700&q=85" alt="City at sunset">
+            <span class="save-button">Save</span>
+          </a>
+        </article>
+
+        <article class="pin-card">
+          <a class="pin-image" href="#">
+            <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=700&q=85" alt="Yellow sports car from above">
+            <span class="save-button">Save</span>
+          </a>
+        </article>
+
+        <article class="pin-card">
+          <a class="pin-image" href="#">
+            <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=700&q=85" alt="Vintage car">
+            <span class="save-button">Save</span>
+          </a>
+        </article>
+
+        <article class="pin-card">
+          <a class="pin-image art-card art-blue" href="#">
+            <span class="art-word">MAKE<br>IT<br>HAPPEN</span>
+            <span class="save-button">Save</span>
+          </a>
+        </article>
+
+        <article class="pin-card">
+          <a class="pin-image" href="#">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=85" alt="Warm modern living room">
+            <span class="save-button">Save</span>
+          </a>
+        </article>
+
+        <article class="pin-card">
+          <a class="pin-image" href="#">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=85" alt="Mountain landscape beneath a bright sky">
+            <span class="save-button">Save</span>
+          </a>
+        </article>
+
+        <article class="pin-card">
+          <a class="pin-image" href="#">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=700&q=85" alt="Colorful healthy lunch bowl">
+            <span class="save-button">Save</span>
+          </a>
+        </article>
+
+        <article class="pin-card">
+          <a class="pin-image" href="#">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=85" alt="Friends browsing a clothing shop">
+            <span class="save-button">Save</span>
+          </a>
+        </article>
+
+        <article class="pin-card">
+          <a class="pin-image" href="#">
+            <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=700&q=85" alt="Soft pink flowers in bloom">
+            <span class="save-button">Save</span>
+          </a>
+        </article>
+
+        <article class="pin-card">
+          <a class="pin-image" href="#">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=700&q=85" alt="Modern glass architecture looking upward">
+            <span class="save-button">Save</span>
+          </a>
+        </article>
+
+        <article class="pin-card">
+          <a class="pin-image" href="#">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=700&q=85" alt="Snowy mountain under a starry sky">
+            <span class="save-button">Save</span>
+          </a>
+        </article>
+
+        <article class="pin-card">
+          <a class="pin-image" href="#">
+            <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=700&q=85" alt="Quiet desk with books and coffee">
+            <span class="save-button">Save</span>
+          </a>
+        </article>
+
+        <article class="pin-card">
+          <a class="pin-image" href="#">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=700&q=85" alt="Green houseplant in a bright room">
+            <span class="save-button">Save</span>
+          </a>
+        </article>
+
+        <article class="pin-card">
+          <a class="pin-image" href="#">
+            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=700&q=85" alt="Bright art supplies and colorful painting">
+            <span class="save-button">Save</span>
+          </a>
+        </article>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>

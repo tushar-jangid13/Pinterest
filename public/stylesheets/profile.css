@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f1f1f1;
+  color: #111;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.profile-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+}
+
+.card {
+  width: min(100%, 440px);
+  padding: 40px 36px 34px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #efefef;
+  border-radius: 28px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+}
+
+.avatar {
+  width: 112px;
+  height: 112px;
+  margin: 0 auto 20px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #e60023;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.name {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.handle {
+  margin: 8px 0 26px;
+  color: #767676;
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 28px;
+  padding: 17px 4px;
+  border: 1px solid #efefef;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.stats > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.stats > div + div {
+  border-left: 1px solid #e9e9e9;
+}
+
+.stats strong {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.stats span {
+  color: #767676;
+  font-size: 12px;
+}
+
+.btn {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: #e60023;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.btn:hover {
+  background: #ad081b;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 480px) {
+  .profile-page {
+    padding: 20px 14px;
+  }
+
+  .card {
+    padding: 32px 22px 26px;
+    border-radius: 24px;
+  }
+
+  .avatar {
+    width: 96px;
+    height: 96px;
+  }
+
+  .name {
+    font-size: 25px;
+  }
+}
